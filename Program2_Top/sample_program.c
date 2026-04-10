@@ -7,11 +7,10 @@
 #define MEM_SIZE_MB 100  // adjust this to see a bigger jump in %mem
 
 void stress_cpu() {
-    // performing redundant math to keep the cpu busy
-    double x = 1.5;
-    for (int i = 0; i < 1000000; i++) {
-        x *= 1.1;
-        x /= 1.1;
+    double x = 1.7;
+    for (int i = 0; i < 1200000; i++) {
+        x *= 1.08;
+        x /= 1.08;
     }
 }
 
@@ -22,8 +21,7 @@ int main() {
     printf("2. this program will now stress cpu and memory...\n");
     printf("3. press ctrl+c to stop the program.\n");
 
-    // memory stress: allocate and touch memory
-    // simply allocating is not enough; we must write to it (memset)
+    // simply allocating is not enough; we must write to it(memset)
     size_t bytes = (size_t)MEM_SIZE_MB * 1024 * 1024;
     char *buffer = malloc(bytes);
 
@@ -34,8 +32,6 @@ int main() {
 
     printf("-> allocated %dmb. writing to memory...\n", MEM_SIZE_MB);
     memset(buffer, 'A', bytes); 
-
-    // cpu stress: infinite loop to keep the process at the top of 'top'
     while (1) {
         stress_cpu();
     }
