@@ -16,10 +16,8 @@ void stress_cpu() {
 }
 
 int main() {
-    printf("==================================================\n");
     printf("  program 2: resource utilization observer        \n");
     printf("  process id (pid): %d                            \n", getpid());
-    printf("==================================================\n");
     printf("1. check 'top' now to see baseline stats.\n");
     printf("2. this program will now stress cpu and memory...\n");
     printf("3. press ctrl+c to stop the program.\n");
@@ -35,7 +33,7 @@ int main() {
     }
 
     printf("-> allocated %dmb. writing to memory...\n", MEM_SIZE_MB);
-    memset(buffer, 'A', bytes); // force the os to map the pages
+    memset(buffer, 'A', bytes); 
 
     // cpu stress: infinite loop to keep the process at the top of 'top'
     while (1) {
