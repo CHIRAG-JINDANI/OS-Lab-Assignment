@@ -1,0 +1,9 @@
+========================================
+   GDB DEBUG OUTPUT FILE
+========================================
+a (after swap)     = 20
+b (after swap)     = 10
+largest(a,b)       = 20
+sum of array       = 75
+address of a       = 0x7fff205cbfd4
+address of arr[0]  = 0x7fff205cc010

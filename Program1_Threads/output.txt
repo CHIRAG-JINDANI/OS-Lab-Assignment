@@ -1,0 +1,31 @@
+==================================================
+  program 1: thread variable address observation  
+==================================================
+main thread id  : 129329595647808
+global variable | value: 100   | address: 0x61d286415010
+==================================================
+
+--------------------------------------------------
+thread id       : 1 (pthread_t: 129329595643456)
+local  variable | value: 10    | address: 0x759fe49b6e40
+global variable | value: 100   | address: 0x61d286415010
+--------------------------------------------------
+--------------------------------------------------
+thread id       : 4 (pthread_t: 129329570465344)
+local  variable | value: 40    | address: 0x759fe31b3e40
+global variable | value: 100   | address: 0x61d286415010
+--------------------------------------------------
+--------------------------------------------------
+thread id       : 2 (pthread_t: 129329587250752)
+local  variable | value: 20    | address: 0x759fe41b5e40
+global variable | value: 100   | address: 0x61d286415010
+--------------------------------------------------
+--------------------------------------------------
+thread id       : 3 (pthread_t: 129329578858048)
+local  variable | value: 30    | address: 0x759fe39b4e40
+global variable | value: 100   | address: 0x61d286415010
+--------------------------------------------------
+
+[main] all threads finished.
+[main] summary: local variables had different addresses per thread.
+[main] summary: global variable had the same address in all threads.

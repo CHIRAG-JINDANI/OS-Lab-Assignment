@@ -1,0 +1,53 @@
+Breakpoint 1 at 0x132f: file debug_program.c, line 40.
+warning: Error disabling address space randomization: Operation not permitted
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at debug_program.c:40
+40	int main() {
+$1 = 25148
+$2 = 49162300
+$3 = (int *) 0x7fff205cbfd4
+42	    printf(LINE);
+========================================
+   PROGRAM 4: GDB DEBUGGING DEMO
+========================================
+
+[1] Pointer Manipulation:
+    a = 10  | address of a = 0x7fff205cbfd4
+    b = 20  | address of b = 0x7fff205cbfd8
+    *ptr_a  = 10
+    *ptr_b  = 20
+
+[2] Largest of 10 and 20 = 20
+
+[3] Before Swap: a = 10, b = 20
+    After  Swap: a = 20, b = 10
+
+[4] Array elements:
+    arr[0] = 5 | address = 0x7fff205cc010
+    arr[1] = 10 | address = 0x7fff205cc014
+    arr[2] = 15 | address = 0x7fff205cc018
+    arr[3] = 20 | address = 0x7fff205cc01c
+    arr[4] = 25 | address = 0x7fff205cc020
+    Sum of array = 75
+
+[5] While loop countdown:
+    count = 5 | address = 0x7fff205cbfdc
+    count = 4 | address = 0x7fff205cbfdc
+    count = 3 | address = 0x7fff205cbfdc
+    count = 2 | address = 0x7fff205cbfdc
+    count = 1 | address = 0x7fff205cbfdc
+
+[6] Writing results to file: debug_output.txt
+    -> File written and flushed successfully.
+
+[7] Dynamic Memory:
+    dyn[0] = 100 | address = 0x623cb09176a0
+    dyn[1] = 200 | address = 0x623cb09176a4
+    dyn[2] = 300 | address = 0x623cb09176a8
+
+========================================
+   PROGRAM COMPLETE
+========================================
+[Inferior 1 (process 4379) exited normally]
