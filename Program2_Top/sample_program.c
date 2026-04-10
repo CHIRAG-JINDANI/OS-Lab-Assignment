@@ -1,9 +1,3 @@
-/*
- * program 2: system resource utilization monitor
- * author: chirag jindani
- * description: stresses cpu and memory to make them easily 
- * observable in the 'top' command for system analysis.
- */
 
 #include <stdio.h>
 #include <stdlib.h>
